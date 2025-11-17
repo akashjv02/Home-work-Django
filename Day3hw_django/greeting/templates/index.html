@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+</head>
+<body>
+    {% if myobjct %}
+        {% for obj in myobjct %}
+
+            <h3>{{ obj.name }}</h3>
+            <p>Grade: {{ obj.grade }}</p>
+
+            {% if obj.status == 'Passed' %}
+                <p style="color: green;">You are Passed</p>
+            {% else %}
+                <p style="color: red;">You are Failed</p>
+            {% endif %}
+
+        {% endfor %}
+    {% else %}
+        <h1 style="color: red;">NO STUDENTS FOUND!!!</h1>
+    {% endif %}    
+</body>
+</html>

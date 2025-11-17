@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <script src="{% static 'script.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Gallery page</title>
+</head>
+<body>
+    <nav>
+        <a href="/gallery/">Home |</a>
+        <a href="/contact/">Aboout</a>
+    </nav>
+
+    <h1>My Image Gallery</h1>
+
+    <img src="{% static 'poocha.jpg' %}"><br>
+    <p>This is first Image</p>
+    <img src="{% static 'kui.jpg' %}"><br>
+    <p>This is second Image</p>
+    <img src="{% static 'boy.jpg' %}"><br>
+    <p>This is Third Image</p>
+    
+</body>
+</html>
