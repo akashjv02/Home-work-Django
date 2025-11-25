@@ -1,0 +1,7 @@
+from django import forms
+from django.core.validators import validate_email
+
+class LoginForm(forms.Form):
+    fullname = forms.CharField(max_length=50,min_length=5)
+    email = forms.EmailField(validators=[validate_email])
+    password = forms.CharField(max_length=20,min_length=8)
